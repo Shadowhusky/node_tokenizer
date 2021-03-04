@@ -1,7 +1,8 @@
 # node_tokenizer
 
 tf.keras tokenizer implemented in nodejs
-python version doc: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer****
+
+tf.keras.preprocessing.text.Tokenizer: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer****
 
 ## Install
 
@@ -13,7 +14,7 @@ npm install --save tf_node_tokenizer
 or with yarn
 
 ```bash
-yarn add use-media
+yarn add tf_node_tokenizer
 ```
 
 ## Usage
