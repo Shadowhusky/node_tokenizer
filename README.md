@@ -2,7 +2,7 @@
 
 tf.keras tokenizer implemented in nodejs
 
-tf.keras.preprocessing.text.Tokenizer: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer****
+tf.keras.preprocessing.text.Tokenizer: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer
 
 ## Install
 
