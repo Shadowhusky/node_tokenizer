@@ -5,10 +5,10 @@ python version doc: https://www.tensorflow.org/api_docs/python/tf/keras/preproce
 
 ## Install
 
-You can install node_tokenizer with npm
+You can install tf_node_tokenizer with npm
 
 ```bash
-npm install --save node_tokenizer
+npm install --save tf_node_tokenizer
 ```
 or with yarn
 
