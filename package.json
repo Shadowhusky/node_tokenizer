@@ -1,0 +1,25 @@
+{
+  "name": "node_tokenizer",
+  "version": "1.0.0",
+  "description": "tf.keras tokenizer implemented in nodejs",
+  "main": "tokenizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shadowhusky/node_tokenizer.git"
+  },
+  "keywords": [
+    "nodejs",
+    "keras",
+    "tensorflow",
+    "tokenizer"
+  ],
+  "author": "shadowhusky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shadowhusky/node_tokenizer/issues"
+  },
+  "homepage": "https://github.com/Shadowhusky/node_tokenizer#readme"
+}
