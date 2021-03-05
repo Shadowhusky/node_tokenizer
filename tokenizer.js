@@ -1,5 +1,4 @@
 class Tokenizer {
-
   /**
    * Class Tokenizer
    * @param filters a string where each element is a character that will be filtered from the texts. The default is all punctuation, plus tabs and line breaks, minus the ' character.
@@ -30,6 +29,11 @@ class Tokenizer {
       .split(" ");
   }
 
+  /**
+   * Updates internal vocabulary based on a list of texts.
+   * @param texts	can be a list of strings, a generator of strings (for memory-efficiency), or a list of list of strings.
+   */
+
   fitOnTexts(texts) {
     texts.forEach((text) => {
       text = this.cleanText(text);
@@ -50,6 +54,12 @@ class Tokenizer {
     });
   }
 
+  /**
+   * Transforms each text in texts to a sequence of integers.
+   * Only top num_words-1 most frequent words will be taken into account. Only words known by the tokenizer will be taken into account.
+   * @param texts	A list of texts (strings).
+   * @return A list of sequences.
+   */
   textsToSequences(texts) {
     // Only translate the top num_words(if provided) of words.
     return texts.map((text) =>
@@ -64,18 +74,29 @@ class Tokenizer {
     );
   }
 
-  toJson() {
-    return JSON.stringify({
-      word_index: this.word_index,
-      index_word: this.index_word,
-      word_counts: this.word_counts,
-    });
+  /**
+   * Returns a JSON string containing the tokenizer configuration. To load a tokenizer from a JSON string, use tokenizerFromJson(json_string).
+   * @param replacer A function that transforms the results. (Passing to JSON.stringify())
+   * @param space — Adds indentation, white space, and line break characters to thereturn-value JSON text to make it easier to read. (Passing to JSON.stringify())
+   * @return A list of sequences.
+   */
+  toJson(replacer, space) {
+    return JSON.stringify(
+      {
+        word_index: this.word_index,
+        index_word: this.index_word,
+        word_counts: this.word_counts,
+      },
+      replacer,
+      space
+    );
   }
 }
 
 /**
  * Create tokenizer from Json string
  * @param json_string JSON string encoding a tokenizer configuration.
+ * @return A tokenizer object
  */
 function tokenizerFromJson(json_string) {
   const tokenizer = new Tokenizer();
