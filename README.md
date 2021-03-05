@@ -23,7 +23,7 @@ With `Tokenizer`
 
 ```jsx
 const { Tokenizer } = require("tf_node_tokenizer");
-const tokenizer = new Tokenizer({ num_words: 5, oov_token = "<unk>", });
+const tokenizer = new Tokenizer({ num_words: 5, oov_token: "<unk>", });
 
 const text = [
   "<start> Cake and frosting all over a face and hands tells a happy story.  <end>",
@@ -32,7 +32,7 @@ const text = [
 ];
 
 tokenizer.fitOnTexts(text);
-tokenizer.texts_to_sequences(text);
+tokenizer.textsToSequences(text);
 
 ```
 
@@ -41,7 +41,7 @@ With `Tokenizer`
 ```jsx
 
 const { Tokenizer, tokenizerFromJson } = require("tf_node_tokenizer");
-const tokenizer = new Tokenizer({ num_words: 5, oov_token = "<unk>", });
+const tokenizer = new Tokenizer({ num_words: 5, oov_token: "<unk>", });
 
 const text = [
   "<start> Cake and frosting all over a face and hands tells a happy story.  <end>",
